@@ -1,4 +1,23 @@
+body {
+    user-select: none;
+}
+
+
 .d-block {
     height: 346px;
     background-size: cover;
+}
+
+.container-sm {
+    margin-bottom: 1em;
+}
+
+.btn-group {
+    float: right;
+}
+
+.form-check > button {
+    display: flex;
+    align-items: center;
+    float: right;
 }
