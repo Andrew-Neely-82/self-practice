@@ -2,6 +2,9 @@ body {
     user-select: none;
 }
 
+h2 {
+    margin-top: 2em;
+}
 
 .d-block {
     height: 346px;

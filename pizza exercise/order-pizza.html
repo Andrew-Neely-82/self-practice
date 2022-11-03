@@ -20,14 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Pizza World</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -35,8 +28,8 @@
         <!-- After Pizza World -->
         <!-- ================= -->
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav  mb-2 mb-sm-0">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#"
                 >Order Online</a
@@ -49,15 +42,9 @@
           <!-- ========== -->
           <!-- Search Bar -->
           <!-- ========== -->
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Zip Code"
-              aria-label="Search" />
-            <button class="btn btn-outline-primary" type="submit">
-              Search stores near you!
-            </button>
+          <form class="d-flex align-items-center">
+            <input class="form-control me-2 w-auto" type="search" placeholder="Zip Code" aria-label="Search" />
+            <button class="btn btn-outline-primary " type="submit">Search stores near you!</button>
           </form>
         </div>
       </div>
@@ -87,7 +74,7 @@
         </div>
       </div>
 
-      <h3>Build your own pizza!</h3>
+      <h2>Build your own pizza!</h2>
 
       <!-- ================== -->
       <!--  Pizza making nav  -->
@@ -240,71 +227,46 @@
           <div class="card">
             <div class="card-body">
               <div class="card" style="width: 100%">
-                <div class="card-header">Hand Tossed</div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    Garlic seasoned crust with a rich, buttery taste.
-                  </li>
-                  <li class="list-group-item">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault1" />
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        Small (10")
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault1" />
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        Medium (12")
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+                <div class="card-header">Cheese</div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">How much?</li>
+                    <li class="list-group-item">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected value="1">Normal</option>
+                        <option value="2">Light</option>
+                        <option value="3">Extra</option>
+                        <option value="4">Double</option>
+                      </select>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card" style="width: 100%; margin-top: 1em;">
+                  <div class="card-header">Sauce</div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">What type?</li>
+                    <li class="list-group-item">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected value="1">Tomato</option>
+                        <option value="2">Marinara</option>
+                        <option value="3">BBQ</option>
+                        <option value="4">Alfredo</option>
+                      </select>
+                    </li>
+                    <li class="list-group-item">How much?</li>
+                    <li class="list-group-item">
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected value="1">Normal</option>
+                        <option value="2">Light</option>
+                        <option value="3">Extra</option>
+                      </select>
+                  </ul>
 
-              <div class="card" style="width: 100%; margin-top: 1em">
-                <div class="card-header">Crispy Thin</div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">
-                    Thin enough for optimum crispy to crunchy ratio.
-                  </li>
-                  <li class="list-group-item">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault1" />
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        Medium (12")
-                      </label>
-                    </div>
-                  </li>
-                  <li class="list-group-item">
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="flexRadioDefault1" />
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        Large (14")
-                      </label>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+                </div>
             </div>
+
+
+
+
             <div class="card-footer text-muted">
               <div class="btn-group" role="tab" aria-label="Basic example">
                 <button type="button" class="btn btn-primary">
