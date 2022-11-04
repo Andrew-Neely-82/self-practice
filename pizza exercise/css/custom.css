@@ -1,26 +1,23 @@
-body {
-    user-select: none;
+.pizza-img {
+  background-image: url("/self-practice-1/pizza exercise/img/pizza.png");
+  height: 346px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-h2 {
-    margin-top: 2em;
-}
-
-.d-block {
-    height: 346px;
-    background-size: cover;
-}
-
-.container-sm {
-    margin-bottom: 1em;
-}
-
-.btn-group {
-    float: right;
-}
-
-.form-check > button {
-    display: flex;
-    align-items: center;
-    float: right;
+.pizza-img::after {
+  content: "Welcome to Pizza World!";
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: black;
+  background-color: white;
+  font-size: 45px;
+  font-weight: bold;
+  opacity: 75%;
 }
