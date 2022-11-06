@@ -1,8 +1,8 @@
-body, html {
-    background-color: #000;
-    color: #325508;
-    text-shadow: 0 0 10px #173173;
-    font-family: Helvetica, sans-serif;
-    margin: 1rem;
+body,
+html {
+	background-color: #000;
+	color: #325508;
+	text-shadow: 0 0 10px #173173;
+	font-family: Helvetica, sans-serif;
+	margin: 1rem;
 }
-
