@@ -26,12 +26,17 @@
 
 	console.log(``);
 
-	// es6 arrow function with for each loop
+	// TODO: es6 arrow function with for each loop
+
+	//? ES6 arrow for each function for number data type
+
 	console.log(`es6 arrow function with for each loop:`);
 
 	numbers.forEach((number) => {
 		console.log(number);
 	});
+
+	//? ES6 arrow for each function for string data type
 
 	console.log(``);
 	console.log(`String data type:`);
