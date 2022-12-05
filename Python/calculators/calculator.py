@@ -5,12 +5,12 @@ print("The operators are +, -, *, /")
 print("Enter 'q' to quit.")
 
 
-## Variables
+# Variables
 num1 = float(input("Enter first number: "))
 op1 = input("Enter operator +, -, *, /: ")
 num2 = float(input("Enter second number: "))
 
-## conditional statements
+# conditional statements
 if op1 == "+":
     print(num1 + num2)
 elif op1 == "-":
@@ -22,5 +22,4 @@ elif op1 == "/":
 else:
     print("Invalid operator")
 
-## End of program
-    
+# End of program

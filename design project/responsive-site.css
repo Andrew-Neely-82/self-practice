@@ -1,0 +1,87 @@
+.logo {
+	height: 50px;
+	width: 50px;
+}
+.codeup {
+	display: none;
+}
+@media screen and (max-width: 500px) {
+}
+
+.button-design {
+	background-color: #e6563b; /* Green */
+	width: 70px;
+	height: 70px;
+	border: none;
+	color: white;
+	padding-top: 20px;
+	text-align: center;
+	text-decoration: none;
+	/*display: inline-block;*/
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+
+	border-radius: 50%;
+}
+
+.button-develop {
+	background-color: #eb9d3a; /* Green */
+	width: 70px;
+	height: 70px;
+	border: none;
+	color: white;
+	padding-top: 20px;
+	text-align: center;
+	text-decoration: none;
+	/*display: inline-block;*/
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+
+	border-radius: 50%;
+}
+
+.button-support {
+	background-color: #7cb06c; /* Green */
+	width: 70px;
+	height: 70px;
+	border: none;
+	color: white;
+	padding-top: 20px;
+	text-align: center;
+	text-decoration: none;
+	/*display: inline-block;*/
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+
+	border-radius: 50%;
+}
+
+.button-host {
+	background-color: #00aba9; /* Green */
+	width: 70px;
+	height: 70px;
+	border: none;
+	color: white;
+	padding-top: 20px;
+	text-align: center;
+	text-decoration: none;
+	/*display: inline-block;*/
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+
+	border-radius: 50%;
+}
+.font-family {
+	font-family: "Anton", sans-serif;
+	font-weight: bolder;
+}
+.abel {
+	font-family: "Abel", sans-serif;
+}
+.font-size {
+	font-size: 12px;
+}
