@@ -1,17 +1,39 @@
 :root {
+  /* Colors */
+  /* background */
   --bg-clr: #f0f0f0;
+  /* border */
+  --border-clr: ;
+  /* text colors */
+  --light-text-clr: ;
+  --dark-font-clr: ;
+  /* circle colors */
+  --red: ;
+  --orange: ;
+  --green: ;
+  --turq: ;
+  /* fonts */
+  --abel: "Abel", sans-serif;
+  --aton: "Anton", sans-serif;
 }
 
-/* added #f0f0f0 to body background */
-/* added #f0f0f0 to body background */
+/* added body background color */
+html,
 body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-clr);
+  font-family: var(--abel);
+}
+
+.container-fluid {
   background-color: var(--bg-clr);
 }
 
 /* Changed logo height */
 .logo {
-  height: 105px;
-  width: 105px;
+  height: 3rem;
+  width: 3rem;
 }
 
 /* changed codeup design font */
@@ -28,9 +50,8 @@ body {
 
 .button-design {
   background-color: #e6563b; /* Green */
-  width: 70px;
   height: 70px;
-  border: none;
+  width: 70px;
   color: white;
   padding-top: 20px;
   text-align: center;
