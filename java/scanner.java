@@ -25,7 +25,7 @@ public class scanner {
     String color = scannerColor.nextLine();
     System.out.println(" ");
     System.out.println(name + "'s favorite color is " + color + "!");
-    System.out.println(" ");
+    System.out.println(" "); 
   }
 
 }
