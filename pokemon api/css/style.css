@@ -1,0 +1,71 @@
+* {
+  font-family: sans-serif;
+  color: white;
+  background-color: black;
+  padding: 0;
+  margin: 0;
+}
+
+/* top banner */
+
+.top-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  background-color: red;
+  z-index: -100000000;
+  user-select: none;
+}
+
+.top-banner * {
+  font-size: 18px;
+  background-color: red;
+}
+
+.top-banner span a {
+  color: white;
+}
+
+/* nav bar */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+}
+
+.navbar * {
+  background-color: #212529 !important;
+  user-select: none;
+}
+
+.form-control {
+  color: #fff;
+  border-top: 1px solid white;
+  border-right: none;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-radius: 10em 0 0 10em;
+  margin: 0 !important;
+  z-index: 10;
+}
+
+.form-control:focus {
+  color: white;
+  border: 1px solid blue !important;
+  box-shadow: 0 0 0.5em white;
+}
+
+.search-button {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left: none;
+  border-radius: 0 10em 10em 0;
+  margin: 0 !important;
+  padding: 0 1em;
+}
+
+.search-button:hover {
+  filter: brightness(1.5);
+}
