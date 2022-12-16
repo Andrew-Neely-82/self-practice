@@ -9,7 +9,7 @@ public class scanner {
     String name = scanner.nextLine();
     System.out.println(" ");
     System.out.println("Hello, " + name + "!");
-    System.out.println(" ");
+    System.out.println(" "); 
 
     // Ask for age
     Scanner scannerAge = new Scanner(System.in);
