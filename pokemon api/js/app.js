@@ -32,14 +32,19 @@
         pokemonInfo(data);
       });
     });
-    $(`.top-banner-close`).click((e) => {
+    $(`.close-top-banner`).click((e) => {
       e.preventDefault();
-      $(`.top-banner`).hide();
-      $(`.navbar`).removeClass(`navbar-m`)
+      closeBanner();
     });
     $(`.clear-button`).click((e) => {
       e.preventDefault();
       $(`.container-pokemon`).empty();
     });
   });
+
+  const closeBanner = () => {
+    $(`.top-banner`).hide();
+    $(`.navbar`).removeClass(`navbar-m`);
+    $(`.pokemon-card`).removeClass(`pokemon-m`);
+  };
 })();

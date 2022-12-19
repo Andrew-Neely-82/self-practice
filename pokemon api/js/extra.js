@@ -30,9 +30,9 @@ const navbar = `
           <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Dropdown </a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="pokedex.html">PokeDex</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider" /></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -76,7 +76,7 @@ const svg = {
     </svg>`,
 };
 const pokeInfo = {
-  divO: `<div class="pokemon-card">`,
+  divO: `<div class="pokemon-card pokemon-m ">`,
   divC: `</div>`,
   nameO: `<h1 class="name">`,
   nameC: `</h1>`,
