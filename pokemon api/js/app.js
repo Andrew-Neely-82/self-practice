@@ -1,16 +1,23 @@
 (() => {
   `use strict`;
   $(document).ready(() => {
-    $(`.form-control`).on(`keyup`, function () {
-      // when the user search for a pokemon, use const url to pull info from the api, info will be displayed in .container-pokemon
-      const url = `https://pokeapi.co/api/v2/pokemon/${$(this).val()}`;
-      $.get(url, (data) => {
+    $(`.search-button`).click((e) => {
+      e.preventDefault();
+      const pokemon = $(`.form-control`).val();
+      $.get(`${url}${pokemon}`, (data) => {
         console.log(data);
-        $(`.container-pokemon`).html(`
+        $(`.container-pokemon`).empty();
+
+
+        pokemonInfo(data);
+        $(`.container-pokemon`).append(`
               ${html.divO}
               ${html.nameO}
               ${data.name}
               ${html.nameC}
+              ${html.imgO}
+              ${data.sprites.front_default}
+              ${html.imgC}
               ${html.typeO}
               ${data.types[0].type.name}
               ${html.typeC}
@@ -23,6 +30,7 @@
               ${html.buttons}
               ${html.divC}
         `);
+        pokemonInfo(data);
       });
     });
   });

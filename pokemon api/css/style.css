@@ -32,11 +32,21 @@
 .navbar {
   position: fixed;
   width: 100%;
+  z-index: 999999999999;
 }
 
 .navbar * {
   background-color: #212529 !important;
   user-select: none;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+.dropdown-item:hover {
+  color: white !important;
+  background: blue !important;
 }
 
 .form-control {
@@ -68,4 +78,27 @@
 
 .search-button:hover {
   filter: brightness(1.5);
+}
+
+/* content */
+
+.container-pokemon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3.5em 0 0 0;
+}
+
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid white;
+}
+
+.pokemon-card .btn {
+  width: 100%;
+  border-radius: 0 !important;
+  margin-top: 1em;
 }
