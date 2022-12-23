@@ -65,15 +65,25 @@
         $(`.search-button`).click();
       }
     });
-    $(`.advanced-search-toggler`).click(() => {
-      $(`.advanced-search-toggler`).addClass(`search-open`);
-    });
   });
 
+  // * close banner
   const closeBanner = () => {
     $(`.top-banner`).hide();
     $(`.navbar`).removeClass(`navbar-m`);
     $(`.pokemon-card`).removeClass(`pokemon-m`);
     $(`.container-info`).removeClass(`info-p`);
   };
+
+  // * show/hide advanced search
+  const advSearch = () => {
+    $(`.advanced-search-toggler`).click((e) => {
+      if (!$(`.wrapper-advanced-search`).hasClass(`search-open`)) {
+        $(`.wrapper-advanced-search`).addClass(`search-open`);
+      } else {
+        $(`.wrapper-advanced-search`).removeClass(`search-open`);
+      }
+    });
+  };
+  advSearch();
 })();

@@ -213,19 +213,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  padding: 1em 0 0 0;
+  height: 0;
+  width: 100%;
+  /* background-color: white; */
+  border: 1px solid white;
+  transition: 150ms all ease-in-out;
+}
+
+/* advanced search toggler */
+
+.container-advanced-search-toggler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .advanced-search-toggler {
-  position: absolute;
-  top: 11.5em;
-  right: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 25%;
   border: 1px solid white;
-  border-radius: 0 0 2em 2em;
-  padding: 0.25em 0;
-  transition: 150ms all ease-in-out;
+  border-radius: 0 0 10em 10em;
+  padding: 0.25em 1em;
+  user-select: none;
 }
 
 .advanced-search-toggler:hover {
@@ -234,7 +246,6 @@
 }
 
 .search-open {
-  height: 100%;
-  width: 100%;
-  background-color: white;
+  height: 50vh !important;
+  /* background-color: white; */
 }
