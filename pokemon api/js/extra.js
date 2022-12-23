@@ -6,7 +6,7 @@ const log = (data) => console.log(data);
 const navbar = `
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-m">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="./index.html">
         <svg class="pokeball-brand" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Pokéball" x="0px" y="0px" viewBox="0 0 595.3 594.1" style="enable-background: new 0 0 595.3 594.1" xml:space="preserve">
           <g id="Pokéball_1_">
           <g id="Colours">
@@ -26,7 +26,7 @@ const navbar = `
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>

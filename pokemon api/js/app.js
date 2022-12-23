@@ -8,6 +8,7 @@
       if ($(`.form-control`).val() === ``) {
         alert(`Please enter a pokemon name`);
       }
+
       const pokemon = $(`.form-control`).val().toLowerCase();
       $.get(`${url}${pokemon}`, (data) => {
         console.log(data);
@@ -22,6 +23,7 @@
           types = types.join(` `);
           return types;
         }
+
         $(`.container-pokemon`).append(`
               ${pokeInfo.divO}
               ${pokeInfo.imgO}
@@ -69,5 +71,6 @@
     $(`.top-banner`).hide();
     $(`.navbar`).removeClass(`navbar-m`);
     $(`.pokemon-card`).removeClass(`pokemon-m`);
+    $(`.container-info`).removeClass(`info-p`);
   };
 })();
