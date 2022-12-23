@@ -5,21 +5,36 @@
     $(`.top-banner`).append(topBanner);
     $(`.search-button`).click((e) => {
       e.preventDefault();
-      const pokemon = $(`.form-control`).val();
+      if ($(`.form-control`).val() === ``) {
+        alert(`Please enter a pokemon name`);
+      }
+      const pokemon = $(`.form-control`).val().toLowerCase();
       $.get(`${url}${pokemon}`, (data) => {
         console.log(data);
         pokemonInfo(data);
+
+        function pokemonTypes(data) {
+          let types = [];
+          for (let i = 0; i < data.types.length; i++) {
+            let type = data.types[i].type.name;
+            types.push(type);
+          }
+          types = types.join(` `);
+          return types;
+        }
         $(`.container-pokemon`).append(`
               ${pokeInfo.divO}
-              ${pokeInfo.nameO}
-              ${data.name}
-              ${pokeInfo.nameC}
               ${pokeInfo.imgO}
               ${data.sprites.front_default}
               ${pokeInfo.imgC}
-              ${pokeInfo.typeO}
-              ${data.types[0].type.name}
-              ${pokeInfo.typeC}
+              ${pokeInfo.nameO}
+              ${data.name}
+              ${pokeInfo.nameC}
+              ${pokemonTypes(data)}
+              ${pokeInfo.typesO}
+              ${pokeInfo.typesC}
+              ${pokeInfo.divRO}
+              ${pokeInfo.divRC}
               ${pokeInfo.heightO}
               ${data.height}
               ${pokeInfo.heightC}
@@ -39,6 +54,14 @@
     $(`.clear-button`).click((e) => {
       e.preventDefault();
       $(`.container-pokemon`).empty();
+    });
+  });
+
+  $(document).ready(() => {
+    $(`.form-control`).keypress((e) => {
+      if (e.which === 13) {
+        $(`.search-button`).click();
+      }
     });
   });
 
