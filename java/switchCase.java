@@ -1,7 +1,6 @@
 import javax.swing.JOptionPane;
 
 public class switchCase {
-  
   public static void main(String[] args) {
     String day = JOptionPane.showInputDialog(null, "Enter a day!");
     switch (day.toLowerCase()) {

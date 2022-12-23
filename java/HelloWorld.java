@@ -3,7 +3,7 @@ public class HelloWorld {
     String hello = "Hello, ";
     String world = "World!";
     System.out.println(hello + world);
-    
+
     // * TODOne 1
     // Create an int variable named myFavoriteNumber and assign your favorite number
     // to it, then print it out to the console.
@@ -71,7 +71,7 @@ public class HelloWorld {
     // Object o = theNumberThree; // does not work
     // int three = (int) o; // does not work
 
-    // * TODOne 13 
+    // * TODOne 13
     // Rewrite the following expressions using the relevant shorthand assignment
     // operators:
 
@@ -91,8 +91,10 @@ public class HelloWorld {
     // x /= y;
 
     // * TODOne 14
-    // What happens if you assign a value to a numerical variable that is larger (or smaller)
-    // than the type can hold? What happens if you increment a numeric variable past the
+    // What happens if you assign a value to a numerical variable that is larger (or
+    // smaller)
+    // than the type can hold? What happens if you increment a numeric variable past
+    // the
     // type's capacity?
     int x = 2147483647; // max value for int
     // System.out.println(x); // 2147483647

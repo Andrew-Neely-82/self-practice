@@ -4,7 +4,6 @@ import javax.swing.JOptionPane;
 
 public class CompareCond {
   public static void main(String[] args) {
-
     // how to do with scanner //
 
     // Scanner scanner = new Scanner(System.in);

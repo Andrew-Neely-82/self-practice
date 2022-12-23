@@ -4,7 +4,7 @@ public class ConsoleExercises {
   public static void main(String[] args) {
     double pi = 3.14159;
     System.out.format("The value of pi is approximately %.2f.%n", pi);
-    
+
     try (Scanner scanner = new Scanner(System.in)) {
       System.out.println("Enter an integer: ");
       int userInt = scanner.nextInt();
@@ -88,7 +88,5 @@ public class ConsoleExercises {
     } catch (NumberFormatException e) {
       e.printStackTrace();
     }
-
   }
-
 }
