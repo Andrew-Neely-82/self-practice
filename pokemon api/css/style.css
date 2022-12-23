@@ -206,3 +206,35 @@
 .pokemon-card .btn:focus {
   box-shadow: none !important;
 }
+
+/* advanced-search */
+
+.wrapper-advanced-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 1em 0 0 0;
+}
+
+.advanced-search-toggler {
+  position: absolute;
+  top: 11.5em;
+  right: 50;
+  width: 25%;
+  border: 1px solid white;
+  border-radius: 0 0 2em 2em;
+  padding: 0.25em 0;
+  transition: 150ms all ease-in-out;
+}
+
+.advanced-search-toggler:hover {
+  filter: brightness(1.5);
+  background-color: #112;
+}
+
+.search-open {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}

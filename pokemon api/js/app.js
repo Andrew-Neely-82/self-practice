@@ -65,6 +65,9 @@
         $(`.search-button`).click();
       }
     });
+    $(`.advanced-search-toggler`).click(() => {
+      $(`.advanced-search-toggler`).addClass(`search-open`);
+    });
   });
 
   const closeBanner = () => {
