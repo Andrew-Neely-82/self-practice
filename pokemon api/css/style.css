@@ -142,7 +142,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 550px;
   border: 1px solid white;
   border-radius: 1em;
   overflow: hidden;
@@ -151,7 +150,6 @@
 .pokemon-card-left {
   display: flex;
   flex-direction: column;
-  height: 100%;
   min-width: 3px !important;
   border-right: 1px solid white;
   flex-wrap: nowrap;
@@ -162,8 +160,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 466px;
-  width: 466px;
+  height: 200px;
+  width: 200px;
 }
 
 .pokemon-img img {
@@ -217,7 +215,65 @@
   width: 100%;
   /* background-color: white; */
   border: 1px solid white;
-  transition: 150ms all ease-in-out;
+  overflow: hidden;
+}
+
+.container-advanced-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.con-btn-left,
+.con-btn-right {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.con-btn-right {
+  display: flex;
+  justify-content: center;
+}
+
+.adv-search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 5em;
+  text-shadow: 0 0 4px black;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  padding: 0.25em 1em;
+  margin: 1em;
+  user-select: none;
+}
+
+.adv-search-btn:hover {
+  filter: saturate(2);
+  scale: 1.1;
+}
+
+.sel-filter {
+  border: 5px solid white;
+  box-shadow: inset 0 0 0.5em black !important;
+}
+
+.container-reset-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset,
+.search-filtered {
+  border: 1px solid white;
+  border-radius: 0.5em;
+  padding: 0.25em 1em;
+  margin: 1em;
+  user-select: none;
 }
 
 /* advanced search toggler */
@@ -238,6 +294,7 @@
   border-radius: 0 0 10em 10em;
   padding: 0.25em 1em;
   user-select: none;
+  transition: 550ms all ease-in-out;
 }
 
 .advanced-search-toggler:hover {
@@ -246,6 +303,8 @@
 }
 
 .search-open {
-  height: 50vh !important;
+  height: 100% !important;
+  width: 100%;
+  transition: 550ms all ease-in-out;
   /* background-color: white; */
 }
