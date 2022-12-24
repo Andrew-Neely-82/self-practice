@@ -14,37 +14,30 @@ $(document).ready(() => {
       console.log(data);
       pokemonInfo(data);
 
-      function pokemonTypes(data) {
-        let types = [];
-        for (let i = 0; i < data.types.length; i++) {
-          let type = data.types[i].type.name;
-          types.push(type);
-        }
-        types = types.join(` `);
-        return types;
-      }
-
       $(`.container-pokemon`).append(`
-              ${pokeInfo.divO}
-              ${pokeInfo.imgO}
-              ${data.sprites.front_default}
-              ${pokeInfo.imgC}
-              ${pokeInfo.nameO}
-              ${data.name}
-              ${pokeInfo.nameC}
-              ${pokemonTypes(data)}
-              ${pokeInfo.typesO}
-              ${pokeInfo.typesC}
-              ${pokeInfo.divRO}
-              ${pokeInfo.divRC}
-              ${pokeInfo.heightO}
-              ${data.height}
-              ${pokeInfo.heightC}
-              ${pokeInfo.weightO}
-              ${data.weight}
-              ${pokeInfo.weightC}
-              ${pokeInfo.buttons}
-              ${pokeInfo.divC}
+        ${pokeInfo.divO}
+        ${pokeInfo.imgO}
+        ${data.sprites.front_default}
+        ${pokeInfo.imgC}
+        ${pokeInfo.idO}
+        #${data.id}
+        ${pokeInfo.idC}
+        ${pokeInfo.nameO}
+        ${data.name}
+        ${pokeInfo.nameC}
+        ${pokeInfo.typesO}
+        ${pokemonTypes(data)}
+        ${pokeInfo.typesC}
+        ${pokeInfo.divRO}
+        ${pokeInfo.divRC}
+        ${pokeInfo.heightO}
+        ${data.height}
+        ${pokeInfo.heightC}
+        ${pokeInfo.weightO}
+        ${data.weight}
+        ${pokeInfo.weightC}
+        ${pokeInfo.buttons}
+        ${pokeInfo.divC}
         `);
       pokemonInfo(data);
     });
@@ -115,17 +108,12 @@ const selFilter = () => {
         for (let i = 0; i < data.pokemon.length; i++) {
           filteredPokemon.push(data.pokemon[i].pokemon);
           $.get(`${data.pokemon[i].pokemon.url}`, (data) => {
+            filteredPokemon.sort()
             let pokemonID = data.id;
-            pokemonInfo(data);
-
-            // if the pokemon has the type selected but another type as well, it will be filtered out
-            if (data.types.length > 1) {
-              for (let i = 0; i < data.types.length; i++) {
-                if (filteredArray.includes(data.types[i].type.name)) {
-                  filteredPokemon.splice(filteredPokemon.indexOf(data.types[i].type.name), 1);
-                }
+              if (pokemonID >= 905) {
+                return;
               }
-            }
+            pokemonInfo(data);
 
             $(`.container-pokemon`).append(`
                     ${pokeInfo.divO}
