@@ -49,21 +49,22 @@ $(document).ready(() => {
       pokemonInfo(data);
     });
   });
+});
+
+// * jQuery functions / 12/24/2022
+$(document).ready(() => {
   $(`.close-top-banner`).click((e) => {
     e.preventDefault();
     closeBanner();
   });
-  $(`.clear-button`).click((e) => {
-    e.preventDefault();
-    $(`.container-pokemon`).empty();
-  });
-});
-
-$(document).ready(() => {
   $(`.form-control`).keypress((e) => {
     if (e.which === 13) {
       $(`.search-button`).click();
     }
+  });
+  $(`.clear-button`).click((e) => {
+    e.preventDefault();
+    $(`.container-pokemon`).empty();
   });
 });
 
@@ -106,20 +107,69 @@ const selFilter = () => {
     $(`.container-pokemon`).empty();
   });
   $(`.search-filtered`).click(() => {
-    urlType = `https://pokeapi.co/api/v2/type/`;
+    $(`.container-pokemon`).empty();
+    const urlType = `https://pokeapi.co/api/v2/type/`;
+    let filteredPokemon = [];
     for (let i = 0; i < filteredArray.length; i++) {
       $.get(`${urlType}${filteredArray[i]}`, (data) => {
-        console.log(data);
         for (let i = 0; i < data.pokemon.length; i++) {
+          filteredPokemon.push(data.pokemon[i].pokemon);
           $.get(`${data.pokemon[i].pokemon.url}`, (data) => {
-            let filteredPokemon = [];
             let pokemonID = data.id;
+            pokemonInfo(data);
+
+            // if the pokemon has the type selected but another type as well, it will be filtered out
+            if (data.types.length > 1) {
+              for (let i = 0; i < data.types.length; i++) {
+                if (filteredArray.includes(data.types[i].type.name)) {
+                  filteredPokemon.splice(filteredPokemon.indexOf(data.types[i].type.name), 1);
+                }
+              }
+            }
+
+            $(`.container-pokemon`).append(`
+                    ${pokeInfo.divO}
+                    ${pokeInfo.imgO}
+                    ${data.sprites.front_default}
+                    ${pokeInfo.imgC}
+                    ${pokeInfo.idO}
+                    #${data.id}
+                    ${pokeInfo.idC}
+                    ${pokeInfo.nameO}
+                    ${data.name}
+                    ${pokeInfo.nameC}
+                    ${pokeInfo.typesO}
+                    ${pokemonTypes(data)}
+                    ${pokeInfo.typesC}
+                    ${pokeInfo.divRO}
+                    ${pokeInfo.divRC}
+                    ${pokeInfo.heightO}
+                    ${data.height}
+                    ${pokeInfo.heightC}
+                    ${pokeInfo.weightO}
+                    ${data.weight}
+                    ${pokeInfo.weightC}
+                    ${pokeInfo.buttons}
+                    ${pokeInfo.divC}
+              `);
           });
         }
+        console.log(data);
+        log(filteredPokemon.sort());
       });
     }
   });
 };
 selFilter();
+
+const pokemonTypes = (data) => {
+  let types = [];
+  for (let i = 0; i < data.types.length; i++) {
+    let type = data.types[i].type.name;
+    types.push(type);
+  }
+  types = types.join(` `);
+  return types;
+};
 
 // })();
