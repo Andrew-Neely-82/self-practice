@@ -1,51 +1,13 @@
 // (() => {
 `use strict`;
-$(document).ready(() => {
-  $(`.container-nav`).append(navbar);
-  $(`.top-banner`).append(topBanner);
-  $(`.search-button`).click((e) => {
-    e.preventDefault();
-    if ($(`.form-control`).val() === ``) {
-      alert(`Please enter a pokemon name`);
-    }
 
-    const pokemon = $(`.form-control`).val().toLowerCase();
-    $.get(`${url}${pokemon}`, (data) => {
-      console.log(data);
-      pokemonInfo(data);
-
-      $(`.container-pokemon`).append(`
-        ${pokeInfo.divO}
-        ${pokeInfo.imgO}
-        ${data.sprites.front_default}
-        ${pokeInfo.imgC}
-        ${pokeInfo.idO}
-        #${data.id}
-        ${pokeInfo.idC}
-        ${pokeInfo.nameO}
-        ${data.name}
-        ${pokeInfo.nameC}
-        ${pokeInfo.typesO}
-        ${pokemonTypes(data)}
-        ${pokeInfo.typesC}
-        ${pokeInfo.divRO}
-        ${pokeInfo.divRC}
-        ${pokeInfo.heightO}
-        ${data.height}
-        ${pokeInfo.heightC}
-        ${pokeInfo.weightO}
-        ${data.weight}
-        ${pokeInfo.weightC}
-        ${pokeInfo.buttons}
-        ${pokeInfo.divC}
-        `);
-      pokemonInfo(data);
-    });
-  });
-});
+// * Variables
+let filteredArray = [];
 
 // * jQuery functions / 12/24/2022
 $(document).ready(() => {
+  $(`.container-nav`).append(navbar);
+  $(`.top-banner`).append(topBanner);
   $(`.close-top-banner`).click((e) => {
     e.preventDefault();
     closeBanner();
@@ -59,9 +21,16 @@ $(document).ready(() => {
     e.preventDefault();
     $(`.container-pokemon`).empty();
   });
+  $(`.reset`).click(() => {
+    $(`.adv-search-btn`).removeClass(`sel-filter`);
+    filteredArray = [];
+    $(`.container-pokemon`).empty();
+  });
+  advSearch();
+  navbarSearchPokemon();
 });
 
-// * close banner
+// * removes top banner and adjusts navbar and pokemon card
 const closeBanner = () => {
   $(`.top-banner`).hide();
   $(`.navbar`).removeClass(`navbar-m`);
@@ -79,10 +48,9 @@ const advSearch = () => {
     }
   });
 };
-advSearch();
 
+// * filters pokemon by type and displays them on the pokedex page
 const selFilter = () => {
-  var filteredArray = [];
   $(`.adv-search-btn`).click((e) => {
     let filterTarget = $(e.target).attr(`class`);
     let typeClass = filterTarget.split(` `);
@@ -94,11 +62,7 @@ const selFilter = () => {
     }
     console.log(filteredArray);
   });
-  $(`.reset`).click(() => {
-    $(`.adv-search-btn`).removeClass(`sel-filter`);
-    filteredArray = [];
-    $(`.container-pokemon`).empty();
-  });
+
   $(`.search-filtered`).click(() => {
     $(`.container-pokemon`).empty();
     const urlType = `https://pokeapi.co/api/v2/type/`;
@@ -108,11 +72,11 @@ const selFilter = () => {
         for (let i = 0; i < data.pokemon.length; i++) {
           filteredPokemon.push(data.pokemon[i].pokemon);
           $.get(`${data.pokemon[i].pokemon.url}`, (data) => {
-            filteredPokemon.sort()
+            filteredPokemon.sort();
             let pokemonID = data.id;
-              if (pokemonID >= 905) {
-                return;
-              }
+            if (pokemonID >= 905) {
+              return;
+            }
             pokemonInfo(data);
 
             $(`.container-pokemon`).append(`
@@ -150,6 +114,47 @@ const selFilter = () => {
 };
 selFilter();
 
+function navbarSearchPokemon() {
+  $(`.search-button`).click((e) => {
+    e.preventDefault();
+    if ($(`.form-control`).val() === ``) {
+      alert(`Please enter a pokemon name`);
+    }
+
+    const pokemon = $(`.form-control`).val().toLowerCase();
+    $.get(`${url}${pokemon}`, (data) => {
+      console.log(data);
+      pokemonInfo(data);
+
+      $(`.container-pokemon`).append(`
+      ${pokeInfo.divO}
+      ${pokeInfo.imgO}
+      ${data.sprites.front_default}
+      ${pokeInfo.imgC}
+      ${pokeInfo.idO}
+      #${data.id}
+      ${pokeInfo.idC}
+      ${pokeInfo.nameO}
+      ${data.name}
+      ${pokeInfo.nameC}
+      ${pokeInfo.typesO}
+      ${pokemonTypes(data)}
+      ${pokeInfo.typesC}
+      ${pokeInfo.divRO}
+      ${pokeInfo.divRC}
+      ${pokeInfo.heightO}
+      ${data.height}
+      ${pokeInfo.heightC}
+      ${pokeInfo.weightO}
+      ${data.weight}
+      ${pokeInfo.weightC}
+      ${pokeInfo.buttons}
+      ${pokeInfo.divC}
+      `);
+      pokemonInfo(data);
+    });
+  });
+}
 const pokemonTypes = (data) => {
   let types = [];
   for (let i = 0; i < data.types.length; i++) {
