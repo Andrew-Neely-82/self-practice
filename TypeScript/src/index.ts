@@ -61,4 +61,36 @@ let myColor3: Color = Color.Blue;
 // 7. any
 // 8. never
 
-// * Type Inference
+// * Functions
+
+// functions are the same as in JavaScript but with a few differences
+// 1. functions are strongly typed (you can't change the type of a function)
+// 2. functions are immutable (you can't change the value of a function)
+
+function calculateTax(income: number, taxYear = 2022): number {
+  if ((taxYear || 2022) < 2022) {
+    return income * 0.2;
+  } else {
+    return income * 0.25;
+  }
+}
+
+calculateTax(10_000);
+
+// * Objects
+
+// objects are the same as in JavaScript but with a few differences
+// 1. objects are strongly typed (you can't change the type of an object)
+// 2. objects are immutable (you can't change the value of an object)
+
+let employee: {
+  readonly id: number;
+  name?: string;
+  retire: (date: Date) => void;
+} = {
+  id: 1,
+  name: "John Doe",
+  retire: (date: Date) => {
+    console.log(`retired on ${date}`);
+  },
+};
