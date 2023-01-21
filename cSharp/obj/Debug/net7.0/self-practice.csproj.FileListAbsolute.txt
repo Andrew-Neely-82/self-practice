@@ -1,0 +1,15 @@
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\bin\Debug\net7.0\self-practice.exe
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\bin\Debug\net7.0\self-practice.deps.json
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\bin\Debug\net7.0\self-practice.runtimeconfig.json
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\bin\Debug\net7.0\self-practice.dll
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\bin\Debug\net7.0\self-practice.pdb
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\obj\Debug\net7.0\self-practice.csproj.AssemblyReference.cache
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\obj\Debug\net7.0\self-practice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\obj\Debug\net7.0\self-practice.AssemblyInfoInputs.cache
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\obj\Debug\net7.0\self-practice.AssemblyInfo.cs
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\obj\Debug\net7.0\self-practice.csproj.CoreCompileInputs.cache
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\obj\Debug\net7.0\self-practice.dll
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\obj\Debug\net7.0\refint\self-practice.dll
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\obj\Debug\net7.0\self-practice.pdb
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\obj\Debug\net7.0\self-practice.genruntimeconfig.cache
+C:\Users\Clav\OneDrive\Desktop\VS Code Repos\Self-Practice\self-practice\cSharp\obj\Debug\net7.0\ref\self-practice.dll
