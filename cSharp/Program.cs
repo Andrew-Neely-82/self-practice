@@ -51,7 +51,8 @@ class Program
 
         // * printed examples of the data types:
         print(
-            "\n\nbyte: "
+            "=============================================================================================="
+                + "\n\nbyte: "
                 + numByte
                 + "\nshort: "
                 + numShort
@@ -86,7 +87,11 @@ class Program
         }
 
         // * fizzbuzz
-        print("\n\n" + "simple fizzbuzz loop:");
+        print(
+            "\n=============================================================================================="
+                + "\n\n"
+                + "simple fizzbuzz loop:"
+        );
 
         for (int i = 0; i <= 15; i++)
         {
@@ -108,8 +113,13 @@ class Program
             }
         }
 
-        // * arrays:
-        print("\n\n" + "int array for loop: ");
+        // * arrays
+        print(
+            "\n=============================================================================================="
+                + "\n\niterating different array types: "
+        );
+        // for loop for int array:
+        print("\n" + "int array for loop: ");
         int[] numbers = { 1, 2, 3, 4, 5 };
 
         for (int i = 0; i <= numbers.Length - 1; i++)
@@ -117,35 +127,108 @@ class Program
             print(numbers[i]);
         }
 
-        print("\n\n" + "foreach loop for numbers array:");
+        // foreach loop for int array:
+        print("\nforeach loop for numbers array:");
         foreach (int num in numbers)
         {
             print(num);
         }
 
-        print("\n\n" + "looping through a names array: ");
+        // for loop on a string array
+        print("\n" + "looping through a names array using a for loop: ");
         string[] names = { "andrew", "bob", "charles", "david", "frank" };
 
-        // for (int i = 0; i < names.Length; i++) {
-        //     print(names[i]);
-        // }
+        for (int i = 0; i < names.Length; i++)
+        {
+            print(names[i]);
+        }
 
+        // foreach loop for string array:
+        print("\n" + "looping through a names array using a foreach loop: ");
         foreach (string a in names)
         {
             print(a);
         }
 
-        print("\n\nadd function: ");
-
+        // * functions
+        print(
+            "\n=============================================================================================="
+                + "\n\nbasic functions: "
+        );
+        // basic add function
+        print("\nadd function: ");
         static int add(int a, int b)
         {
             int result = a + b;
             print(result);
             return result;
         }
+        add(1, 1);
 
-        add(1, 2);
+        // basic subtract function
+        print("\nsubtract function: ");
+        static int subtract(int a, int b)
+        {
+            int result = a - b;
+            print(result);
+            return result;
+        }
+        subtract(5, 1);
 
-        print("test");
+        // basic multiply function
+        print("\nmultiply function: ");
+        static int multiply(int a, int b)
+        {
+            int result = a * b;
+            print(result);
+            return result;
+        }
+        multiply(2, 3);
+
+        // basic divide function
+        print("\ndivide function: ");
+        static int divide(int a, int b)
+        {
+            int result = a / b;
+            print(result);
+            return result;
+        }
+        divide(16, 2);
+
+        // basic divide function
+        print("\ndivide function: ");
+        static int square(int a)
+        {
+            int result = a * a;
+            print(result);
+            return result;
+        }
+        square(3);
+
+        // basic sum of squares function
+        print("\nsum of squares function: ");
+        static int sumOfSquares(int a, int b)
+        {
+            int result = (a * a) + (b + b);
+            print(result);
+            return result;
+        }
+        sumOfSquares(2, 3);
+
+        // evenOrOdd for modulus of number
+        print("\neven or odd detection: ");
+        static void evenOrOdd(int a)
+        {
+            print(a + " is: " + (a % 2 == 0 ? "even" : "odd"));
+        }
+        evenOrOdd(3);
+
+        // divisible by 3
+        print("\ndivisible by 3: ");
+        static void divisibleByThree(int a)
+        {
+            print(a + " is " + (a % 3 == 0 ? "divisible by 3" : "not divisible by 3"));
+        }
+        divisibleByThree(7);
     }
 }
