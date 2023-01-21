@@ -1,3 +1,4 @@
 index.js.map
-launch.json
 tsconfig.json
+# .vscode
+.vscode/*
