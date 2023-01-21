@@ -230,5 +230,8 @@ class Program
             print(a + " is " + (a % 3 == 0 ? "divisible by 3" : "not divisible by 3"));
         }
         divisibleByThree(7);
+
+        // ? run cd cSharp
+        // ? then dotnet run to run the program
     }
 }
