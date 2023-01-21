@@ -116,7 +116,7 @@ class Program
         // * arrays
         print(
             "\n=============================================================================================="
-                + "\n\niterating different array types: "
+                + "\n\nITERATING DIFFERENT ARRAY TYPES"
         );
         // for loop for int array:
         print("\n" + "int array for loop: ");
@@ -153,7 +153,7 @@ class Program
         // * functions
         print(
             "\n=============================================================================================="
-                + "\n\nbasic functions: "
+                + "\n\nBASIC FUNCTIONS"
         );
         // basic add function
         print("\nadd function: ");
