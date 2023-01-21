@@ -1,4 +1,7 @@
-index.js.map
-tsconfig.json
+## folders
 # .vscode
 .vscode/*
+
+# files
+index.js.map
+tsconfig.json
