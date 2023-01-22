@@ -233,5 +233,14 @@ class Program
 
         // ? run cd cSharp
         // ? then dotnet run to run the program
+
+
+        for (int i = 0; i < 5; i++) { 
+          if (i % 2 != 0) {
+            Console.Beep();
+          }
+        }
+
+        // Console.ReadKey(); // this makes it to where you have to press a key in the CLI to stop the application
     }
 }
