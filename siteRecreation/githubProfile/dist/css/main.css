@@ -24,11 +24,31 @@ nav {
   padding-left: 2em;
 }
 
+::-moz-placeholder {
+  color: #f0f6fc;
+  opacity: 0.75;
+}
+
+:-ms-input-placeholder {
+  color: #f0f6fc;
+  opacity: 0.75;
+}
+
+::placeholder {
+  color: #f0f6fc;
+  opacity: 0.75;
+}
+
 .search {
+  width: 245px;
   color: #f0f6fc;
   background-color: #0d1117;
   border: 1px solid #30363d;
   border-radius: 6px;
-  padding: 5px 14px;
-  margin-left: 1em;
+  padding: 6px 12px;
+  margin-left: 17px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
