@@ -1,19 +1,66 @@
-$bg-color: #000;
-$font-color: #333;
+// colors
+$color: (
+  bg-color: #0d1117,
+  nav-clr: #161b22,
+  git-white: #f0f6fc,
+  bdr-clr: #30363d,
+);
+// * font families
+$font-family: (
+  serif: "sans-serif",
+  roboto: "Roboto",
+);
+// * font info
 $font-weights: (
   light: 300,
   regular: 400,
   medium: 500,
   bold: 700,
 );
+// * flexbox
+// display
+$f: flex;
+// flex-wrap
+$fw: flex-wrap;
+$nfw: nowrap;
+// flex-direction
+$fdr: row;
+$fdc: column;
+// justify-content
+$fs: flex-start;
 
 body {
-  background-color: $bg-color;
-  color: $font-color;
-  font-family: "Open Sans", sans-serif;
+  background-color: map-get($color, bg-color);
+  color: map-get($color, git-white);
+  font-family: map-get($font-family, serif);
   font-size: 16px;
   font-weight: map-get($font-weights, regular);
   line-height: 1.5;
   margin: 0;
   padding: 0;
+}
+
+nav {
+  display: $f;
+  flex-direction: $fdr;
+  justify-content: $fs;
+  align-items: center;
+  height: 60px !important;
+  width: 100%;
+  background: map-get($color, nav-clr);
+  // padding: 16px 32px; // questionable padding
+}
+
+.git-svg {
+  fill: map-get($color, git-white);
+  padding-left: 2em;
+}
+
+.search {
+  color: map-get($color, git-white);
+  background-color: map-get($color, bg-color);
+  border: 1px solid map-get($color, bdr-clr);
+  border-radius: 6px;
+  padding: 5px 14px;
+  margin-left: 1em;
 }
