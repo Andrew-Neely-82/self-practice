@@ -1,5 +1,4 @@
-## folders
-# .vscode
-.vscode/*
-
-# files
+.nvm/*
+bundle.js
+bundle.js.LICENSE.txt
+node_modules/*
