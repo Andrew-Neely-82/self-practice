@@ -1,3 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 body {
   background-color: #0d1117;
   color: #f0f6fc;
@@ -81,6 +90,13 @@ li {
   font-size: 14px;
   margin-right: 1em;
 }
+.nav-links li a {
+  color: #f0f6fc;
+  text-decoration: none;
+}
+.nav-links li a:hover {
+  opacity: 0.75;
+}
 
 .container-user-tools {
   display: flex;
@@ -132,6 +148,8 @@ li {
 .container-links {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 .container-links ul {
   display: flex;
@@ -145,6 +163,9 @@ li {
 .container-links ul li a {
   color: #f0f6fc;
   text-decoration: none;
+}
+.container-links ul li a:hover {
+  background: #21262d;
 }
 
 .container-left img {
@@ -169,12 +190,18 @@ li {
   margin: 0;
 }
 .container-bio button {
-  height: 32px;
-  width: 296px;
+  height: 32px !important;
+  width: 296px !important;
   color: #c9d1d9;
+  font-size: 14px;
   background: #21262d;
   border: 1px solid #363b42;
   border-radius: 6px;
+  cursor: pointer;
+}
+.container-bio button:hover {
+  filter: brightness(1.5);
+  transition: 150ms;
 }
 
 .follow-info {
@@ -195,12 +222,22 @@ li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding: 0;
+  margin: 0;
 }
-.user-info li svg {
+.user-info ul {
+  padding: 0;
+  margin: 0;
+}
+.user-info ul li {
+  padding: 0;
+  margin: 0;
+}
+.user-info ul li svg {
   fill: #f0f6fc;
   opacity: 0.5;
 }
-.user-info li span {
+.user-info ul li span {
   color: #f0f6fc !important;
   opacity: 1;
 }
@@ -223,9 +260,20 @@ li {
   height: 64px;
   width: 64px;
 }
-.container-achievements span {
+.container-achievements .x2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 30.69px;
+  position: absolute;
+  top: 704px;
+  left: 40px;
+  color: black;
+  font-size: 12px;
   background: #f9bfa7;
   border-radius: 10em;
+  box-shadow: 0 3px 6px #010409;
 }
 
 .beta-feedback {
