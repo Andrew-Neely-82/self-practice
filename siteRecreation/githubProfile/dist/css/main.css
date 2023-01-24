@@ -132,3 +132,23 @@ li {
 .caret-2 {
   margin-left: 4px;
 }
+
+.container-organizations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.container-organizations ul {
+  padding: 0;
+  display: flex;
+}
+.container-organizations ul li {
+  display: flex;
+  flex-direction: row;
+}
+.container-organizations ul li a img {
+  height: 32px !important;
+  width: 32px !important;
+  border-radius: 6px;
+}

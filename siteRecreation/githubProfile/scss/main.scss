@@ -154,3 +154,27 @@ li {
 .caret-2 {
   margin-left: 4px;
 }
+
+// organizations
+
+.container-organizations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  ul {
+    padding: 0;
+    display: flex;
+    li {
+      display: flex;
+      flex-direction: row;
+      a {
+        img {
+          height: 32px !important;
+          width: 32px !important;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+}
