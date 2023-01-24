@@ -4,6 +4,8 @@ $color: (
   nav-clr: #161b22,
   git-white: #f0f6fc,
   bdr-clr: #30363d,
+  beta-clr: #3fb950,
+  anchor: #58a6ff,
 );
 // * font families
 $font-family: (
@@ -94,7 +96,6 @@ li {
   justify-content: $fs;
   align-items: center;
   list-style: none;
-  list-style: none;
   padding: 0;
   margin: 1em;
   li {
@@ -112,27 +113,22 @@ li {
   svg {
     fill: map-get($color, git-white);
   }
-}
-
-.container-user-tools .bell {
-  margin-right: 1em;
-}
-
-.dropdown-caret {
-  border-bottom-color: #0000;
-  border-left-color: #0000;
-  border-right-color: #0000;
-  border-style: solid;
-  border-width: var(--primer-borderWidth-thicker, 4px) var(--primer-borderWidth-thicker, 4px) 0;
-  content: "";
-  display: inline-block;
-  height: 0;
-  vertical-align: middle;
-  width: 0;
-  margin-right: 1em;
-}
-
-.container-user-tools {
+  .bell {
+    margin-right: 1em;
+  }
+  .dropdown-caret {
+    border-bottom-color: #0000;
+    border-left-color: #0000;
+    border-right-color: #0000;
+    border-style: solid;
+    border-width: 4px;
+    content: "";
+    display: inline-block;
+    height: 0;
+    vertical-align: middle;
+    width: 0;
+    margin-right: 1em;
+  }
   img {
     border-radius: 100%;
   }
@@ -155,19 +151,147 @@ li {
   margin-left: 4px;
 }
 
-// organizations
+.container-links {
+  display: flex;
+  flex-direction: row;
+  // ul of ^
+  ul {
+    display: flex;
+    color: map-get($color, git-white);
+    padding: 0;
+    margin: 0;
+    // li of ^
+    li {
+      margin-right: 1em;
+      // anchor of ^
+      a {
+        color: map-get($color, git-white);
+        text-decoration: none;
+      }
+    }
+  }
+}
 
+.container-left {
+  img {
+    height: 296px;
+    width: 296px;
+    border-radius: 100%;
+  }
+}
+
+.container-bio {
+  display: flex;
+  flex-direction: column;
+  .name {
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+  }
+  .user-name {
+    color: #8b949e;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  button {
+    height: 32px;
+    width: 296px;
+    color: #c9d1d9;
+    background: #21262d;
+    border: 1px solid #363b42;
+    border-radius: 6px;
+  }
+}
+
+.follow-info {
+  display: flex;
+  flex-direction: row;
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      svg {
+        fill: map-get($color, git-white);
+      }
+    }
+  }
+}
+
+.user-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  li {
+    svg {
+      fill: map-get($color, git-white);
+      opacity: 0.5;
+    }
+    span {
+      color: map-get($color, git-white) !important;
+      opacity: 1;
+    }
+  }
+}
+
+.container-achievements {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  a {
+    color: map-get($color, git-white);
+    text-decoration: none;
+    span {
+      background: transparent;
+      font-size: 16px;
+    }
+  }
+  img {
+    height: 64px;
+    width: 64px;
+  }
+  span {
+    background: #f9bfa7;
+    border-radius: 10em;
+  }
+}
+
+.beta-feedback {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  .beta {
+    width: fit-content;
+    color: map-get($color, beta-clr);
+    font-size: 12px;
+    border: 1px solid map-get($color, beta-clr);
+    border-radius: 10em;
+    padding: 4px 8px;
+    margin-right: 0 4px 0 0;
+  }
+  .send-feedback {
+    color: map-get($color, anchor);
+    font-size: 12px;
+  }
+}
+
+// organizations
 .container-organizations {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  user-select: none;
   ul {
     padding: 0;
     display: flex;
     li {
       display: flex;
       flex-direction: row;
+      padding: 2px;
       a {
         img {
           height: 32px !important;
