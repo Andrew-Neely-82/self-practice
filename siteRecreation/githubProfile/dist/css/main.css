@@ -1,12 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
 body {
   background-color: #0d1117;
   color: #f0f6fc;
@@ -32,6 +23,15 @@ li {
   list-style: none !important;
   padding: 0;
   margin: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .container-nav-left {

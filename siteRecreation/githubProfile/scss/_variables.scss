@@ -1,0 +1,33 @@
+// colors
+$color: (
+  bg-color: #0d1117,
+  nav-clr: #161b22,
+  git-white: #f0f6fc,
+  bdr-clr: #30363d,
+  beta-clr: #3fb950,
+  anchor: #58a6ff,
+);
+// * font families
+$font-family: (
+  serif: "sans-serif",
+  roboto: "Roboto",
+  source: "Source Sans Pro",
+);
+// * font info
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+);
+// * flexbox
+// display
+$f: flex;
+// flex-wrap
+$fw: flex-wrap;
+$nfw: nowrap;
+// flex-direction
+$fdr: row;
+$fdc: column;
+// justify-content
+$fs: flex-start;
