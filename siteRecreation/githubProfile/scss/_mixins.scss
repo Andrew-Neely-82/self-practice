@@ -1,4 +1,4 @@
-// * color mixins 
+// * color mixins
 @mixin bg-color {
   color: map-get($color, bg-color);
 }
@@ -17,15 +17,30 @@
 }
 
 @mixin column {
-  flex-direction: $fdc;
+  flex-direction: map-get($flexDirection, col);
+}
+
+@mixin jcCenter {
+  justify-content: map-get($justContent, center);
 }
 
 @mixin jcStart {
-  justify-content: $fs;
+  justify-content: flex-start;
+}
+
+@mixin aiStart {
+  align-items: flex-start;
 }
 
 @mixin aiCenter {
-  align-items: $aic;
+  align-items: center;
+}
+
+@mixin flexRowCenterCenter {
+  @include flex;
+  @include row;
+  @include jcCenter;
+  @include aiCenter;
 }
 
 @mixin flexRowStartCenter {
@@ -33,6 +48,13 @@
   @include row;
   @include jcStart;
   @include aiCenter;
+}
+
+@mixin flexColStartStart {
+  @include flex;
+  @include column;
+  @include jcStart;
+  @include aiStart;
 }
 
 @mixin flexColStartCenter {

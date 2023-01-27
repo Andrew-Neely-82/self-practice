@@ -1,6 +1,7 @@
 @import "./variables";
 @import "./defaults";
 @import "./mixins";
+@import "./functions";
 
 .container-nav-left {
   @include flexRowStartCenter;
@@ -30,10 +31,10 @@
 }
 
 .nav-links {
-  display: $f;
-  flex-direction: $fdr;
-  justify-content: $fs;
-  align-items: center;
+  display: flex;
+  flex-direction: map-get($flexDirection, row);
+  justify-content: map-get($justifyContent, center);
+  align-items: map-get($alignItems, center);
   list-style: none;
   padding: 0;
   margin: 1em;
@@ -51,10 +52,10 @@
 }
 
 .container-user-tools {
-  display: $f;
-  flex-direction: $fdr;
-  justify-content: flex-end;
-  align-items: center;
+  display: map-get($display, flex);
+  flex-direction: map-get($flexDirection, row);
+  justify-content: map-get($justifyContent, flex-end);
+  align-items: map-get($alignItems, center);
   padding-right: 2em;
   svg {
     fill: map-get($color, git-white);
@@ -97,8 +98,12 @@
   margin-left: 4px;
 }
 
+.mid-container {
+  margin: 24px 0 0 0;
+}
+
 .container-links {
-  @include flexRowStartCenter;
+  @include flexRowCenterCenter;
   // ul of ^
   ul {
     display: flex;
@@ -110,8 +115,16 @@
       margin-right: 1em;
       // anchor of ^
       a {
+        @include flexRowStartCenter;
         color: map-get($color, git-white);
         text-decoration: none;
+        svg {
+          height: 16px;
+          width: 16px;
+          fill: map-get($color, git-white);
+          opacity: 0.5;
+          margin-right: 8px;
+        }
       }
       a:hover {
         background: #21262d;
@@ -131,16 +144,22 @@
 .container-bio {
   display: flex;
   flex-direction: column;
-  .name {
-    font-size: 24px;
-    padding: 0;
-    margin: 0;
+  .container-names {
+    @include flexColStartStart;
+    .name {
+      font-size: 24px;
+      padding: 0;
+      margin: 0;
+    }
+    .user-name {
+      color: #8b949e;
+      font-size: 20px;
+      padding: 0;
+      margin: 0;
+    }
   }
-  .user-name {
-    color: #8b949e;
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
+  .bio-note {
+    margin-bottom: 16px;
   }
   button {
     height: 32px !important;
@@ -162,10 +181,11 @@
   display: flex;
   flex-direction: row;
   ul {
-    display: flex;
+    @include flexRowStartCenter;
     li {
       list-style: none;
       svg {
+        opacity: 0.5;
         fill: map-get($color, git-white);
       }
     }

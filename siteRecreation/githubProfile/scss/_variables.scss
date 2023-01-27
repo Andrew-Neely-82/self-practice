@@ -8,8 +8,6 @@ $color: (
   anchor: #58a6ff,
 );
 
-
-
 // * font families
 $font-family: (
   serif: "sans-serif",
@@ -23,12 +21,35 @@ $font-weights: (
   medium: 500,
   bold: 700,
 );
+
+// =========================== //
+
 // * flexbox
 // display
+$display: (
+  block: block,
+  flex: flex,
+  inline: inline,
+  inline-block: inline-block,
+  inline-flex: inline-flex,
+  none: none,
+);
 $f: flex;
+
+// flex-direction
+$flexDirection: (
+  row: row,
+  col: column,
+  row-r: row-reverse,
+  col-r: column-reverse,
+);
+
 // flex-wrap
-$fw: flex-wrap;
-$nfw: nowrap;
+$flexWrap: (
+  flex-wrap: wrap,
+  nowrap: nowrap,
+);
+
 // flex-direction
 $fdr: row;
 $fdc: column;
@@ -36,6 +57,24 @@ $fdc: column;
 $fs: flex-start;
 // align items
 $aic: center;
+
+$justifyContent: (
+  center: center,
+  flex-start: flex-start,
+  flex-end: flex-end,
+  space-between: space-between,
+  space-around: space-around,
+  space-evenly: space-evenly,
+);
+
+$alignItems: (
+  center: center,
+  flex-start: flex-start,
+  flex-end: flex-end,
+  space-around: space-around,
+  space-between: space-between,
+  stretch: stretch,
+);
 
 @mixin dfFdrJcsAic {
   display: $f;

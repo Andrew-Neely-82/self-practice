@@ -85,7 +85,7 @@ a {
 .nav-links {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   list-style: none;
   padding: 0;
@@ -150,10 +150,14 @@ a {
   margin-left: 4px;
 }
 
+.mid-container {
+  margin: 24px 0 0 0;
+}
+
 .container-links {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 .container-links ul {
@@ -166,8 +170,19 @@ a {
   margin-right: 1em;
 }
 .container-links ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   color: #f0f6fc;
   text-decoration: none;
+}
+.container-links ul li a svg {
+  height: 16px;
+  width: 16px;
+  fill: #f0f6fc;
+  opacity: 0.5;
+  margin-right: 8px;
 }
 .container-links ul li a:hover {
   background: #21262d;
@@ -183,16 +198,25 @@ a {
   display: flex;
   flex-direction: column;
 }
-.container-bio .name {
+.container-bio .container-names {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.container-bio .container-names .name {
   font-size: 24px;
   padding: 0;
   margin: 0;
 }
-.container-bio .user-name {
+.container-bio .container-names .user-name {
   color: #8b949e;
   font-size: 20px;
   padding: 0;
   margin: 0;
+}
+.container-bio .bio-note {
+  margin-bottom: 16px;
 }
 .container-bio button {
   height: 32px !important;
@@ -215,11 +239,15 @@ a {
 }
 .follow-info ul {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 .follow-info ul li {
   list-style: none;
 }
 .follow-info ul li svg {
+  opacity: 0.5;
   fill: #f0f6fc;
 }
 
