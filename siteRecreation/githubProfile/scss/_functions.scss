@@ -1,0 +1,10 @@
+// * color function
+@function getColor($color-name) {
+  @return map-get($color, $color-name);
+}
+
+// * function for all flexbox items
+@function getFlexbox($map, $value) {
+  @return map-get($map, $value);
+}
+

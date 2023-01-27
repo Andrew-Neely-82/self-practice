@@ -1,4 +1,4 @@
-// colors
+// * colors
 $color: (
   bg-color: #0d1117,
   nav-clr: #161b22,
@@ -14,12 +14,13 @@ $font-family: (
   roboto: "Roboto",
   source: "Source Sans Pro",
 );
+
 // * font info
 $font-weights: (
   light: 300,
   regular: 400,
   medium: 500,
-  bold: 700,
+  bold: bold,
 );
 
 // =========================== //
@@ -34,30 +35,17 @@ $display: (
   inline-flex: inline-flex,
   none: none,
 );
-$f: flex;
 
 // flex-direction
-$flexDirection: (
+$flexDir: (
   row: row,
-  col: column,
+  column: column,
   row-r: row-reverse,
   col-r: column-reverse,
+  none: none,
 );
 
-// flex-wrap
-$flexWrap: (
-  flex-wrap: wrap,
-  nowrap: nowrap,
-);
-
-// flex-direction
-$fdr: row;
-$fdc: column;
 // justify-content
-$fs: flex-start;
-// align items
-$aic: center;
-
 $justifyContent: (
   center: center,
   flex-start: flex-start,
@@ -65,8 +53,10 @@ $justifyContent: (
   space-between: space-between,
   space-around: space-around,
   space-evenly: space-evenly,
+  none: none,
 );
 
+// align items
 $alignItems: (
   center: center,
   flex-start: flex-start,
@@ -74,11 +64,12 @@ $alignItems: (
   space-around: space-around,
   space-between: space-between,
   stretch: stretch,
+  none: none,
 );
 
-@mixin dfFdrJcsAic {
-  display: $f;
-  flex-direction: $fdr;
-  justify-content: $fs;
-  align-items: $aic;
-}
+// flex-wrap
+$flexWrap: (
+  flex-wrap: wrap,
+  nowrap: nowrap,
+  none: none,
+);

@@ -1,70 +1,15 @@
-// * color mixins
-@mixin bg-color {
-  color: map-get($color, bg-color);
+@import "./functions";
+
+// * color mixin
+@mixin color($color-name) {
+  color: map-get($color, $color-name);
 }
 
-@mixin nav-clr {
-  background-color: map-get($color, nav-clr);
-}
-
-// * flex box mixins
-@mixin flex {
-  display: $f;
-}
-
-@mixin row {
-  flex-direction: $fdr;
-}
-
-@mixin column {
-  flex-direction: map-get($flexDirection, col);
-}
-
-@mixin jcCenter {
-  justify-content: map-get($justContent, center);
-}
-
-@mixin jcStart {
-  justify-content: flex-start;
-}
-
-@mixin aiStart {
-  align-items: flex-start;
-}
-
-@mixin aiCenter {
-  align-items: center;
-}
-
-@mixin flexRowCenterCenter {
-  @include flex;
-  @include row;
-  @include jcCenter;
-  @include aiCenter;
-}
-
-@mixin flexRowStartCenter {
-  @include flex;
-  @include row;
-  @include jcStart;
-  @include aiCenter;
-}
-
-@mixin flexColStartStart {
-  @include flex;
-  @include column;
-  @include jcStart;
-  @include aiStart;
-}
-
-@mixin flexColStartCenter {
-  @include flex;
-  @include column;
-  @include jcStart;
-  @include aiCenter;
-}
-
-@mixin flexRowStartEndCenter {
-  @include flex;
-  @include row;
+// * flexbox mixin
+@mixin flexbox($dis, $fDir, $justC, $aI, $wrap) {
+  display: getFlexbox($display, $dis);
+  flex-direction: getFlexbox($flexDir, $fDir);
+  justify-content: getFlexbox($justifyContent, $justC);
+  align-items: getFlexbox($alignItems, $aI);
+  flex-wrap: getFlexbox($flexWrap, $wrap);
 }
