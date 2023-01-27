@@ -225,6 +225,7 @@ a {
 
 .user-info {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   padding: 0;
@@ -283,6 +284,7 @@ a {
 
 .beta-feedback {
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   padding: 0;
@@ -305,10 +307,6 @@ a {
 }
 
 .container-organizations {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;

@@ -1,0 +1,48 @@
+// * color mixins 
+@mixin bg-color {
+  color: map-get($color, bg-color);
+}
+
+@mixin nav-clr {
+  background-color: map-get($color, nav-clr);
+}
+
+// * flex box mixins
+@mixin flex {
+  display: $f;
+}
+
+@mixin row {
+  flex-direction: $fdr;
+}
+
+@mixin column {
+  flex-direction: $fdc;
+}
+
+@mixin jcStart {
+  justify-content: $fs;
+}
+
+@mixin aiCenter {
+  align-items: $aic;
+}
+
+@mixin flexRowStartCenter {
+  @include flex;
+  @include row;
+  @include jcStart;
+  @include aiCenter;
+}
+
+@mixin flexColStartCenter {
+  @include flex;
+  @include column;
+  @include jcStart;
+  @include aiCenter;
+}
+
+@mixin flexRowStartEndCenter {
+  @include flex;
+  @include row;
+}

@@ -1,13 +1,9 @@
 @import "./variables";
 @import "./defaults";
-
-
+@import "./mixins";
 
 .container-nav-left {
-  display: $f;
-  flex-direction: $fdr;
-  justify-content: $fs;
-  align-items: center;
+  @include flexRowStartCenter;
   width: 100%;
 }
 
@@ -102,10 +98,7 @@
 }
 
 .container-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  @include flexRowStartCenter;
   // ul of ^
   ul {
     display: flex;
@@ -180,9 +173,7 @@
 }
 
 .user-info {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @include flexRowStartCenter;
   padding: 0;
   margin: 0;
   ul {
@@ -238,9 +229,7 @@
 }
 
 .beta-feedback {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @include flexRowStartCenter;
   padding: 0;
   margin: 0;
   .beta {
@@ -260,10 +249,6 @@
 
 // organizations
 .container-organizations {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   user-select: none;
   ul {
     padding: 0;

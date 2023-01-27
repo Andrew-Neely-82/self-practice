@@ -7,6 +7,9 @@ $color: (
   beta-clr: #3fb950,
   anchor: #58a6ff,
 );
+
+
+
 // * font families
 $font-family: (
   serif: "sans-serif",
@@ -31,3 +34,12 @@ $fdr: row;
 $fdc: column;
 // justify-content
 $fs: flex-start;
+// align items
+$aic: center;
+
+@mixin dfFdrJcsAic {
+  display: $f;
+  flex-direction: $fdr;
+  justify-content: $fs;
+  align-items: $aic;
+}
