@@ -13,3 +13,9 @@
   align-items: getFlexbox($alignItems, $aI);
   flex-wrap: getFlexbox($flexWrap, $wrap);
 }
+
+// * padding / margin 0 mixin
+@mixin p0M0 {
+  padding: 0;
+  margin: 0;
+}

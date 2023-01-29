@@ -50,7 +50,7 @@
 
 .container-user-tools {
   @include flexbox(flex, row, flex-end, center, nowrap);
-  padding-right: 2em;
+  padding: 0 2em 0 0;
   svg {
     fill: getColor(git-white);
   }
@@ -89,8 +89,7 @@
 }
 
 .caret-2 {
-  margin-left: 4px;
-  
+  margin: 0 0 0 4px;
 }
 
 .mid-container {
@@ -103,8 +102,7 @@
   ul {
     @include flexbox(flex, none, none, none, nowrap);
     color: map-get($color, git-white);
-    padding: 0;
-    margin: 0;
+    @include p0M0;
     // li of ^
     li {
       margin-right: 1em;
@@ -133,6 +131,7 @@
     height: 296px;
     width: 296px;
     border-radius: 100%;
+    cursor: pointer;
   }
 }
 
@@ -142,14 +141,12 @@
     @include flexbox(flex, column, start, start, nowrap);
     .name {
       font-size: 24px;
-      padding: 0;
-      margin: 0;
+      @include p0M0;
     }
     .user-name {
       color: #8b949e;
       font-size: 20px;
-      padding: 0;
-      margin: 0;
+      @include p0M0;
     }
   }
   .bio-note {
@@ -187,14 +184,11 @@
 
 .user-info {
   @include flexbox(flex, row, start, center, nowrap);
-  padding: 0;
-  margin: 0;
+  @include p0M0;
   ul {
-    padding: 0;
-    margin: 0;
+    @include p0M0;
     li {
-      padding: 0;
-      margin: 0;
+      @include p0M0;
       svg {
         fill: map-get($color, git-white);
         opacity: 0.5;
@@ -238,8 +232,7 @@
 
 .beta-feedback {
   @include flexbox(flex, row, flex-start, center, nowrap);
-  padding: 0;
-  margin: 0;
+  @include p0M0;
   .beta {
     width: fit-content;
     color: map-get($color, beta-clr);
@@ -259,7 +252,7 @@
 .container-organizations {
   user-select: none;
   ul {
-    padding: 0;
+    @include p0M0;
     @include flexbox(flex, row, none, none, nowrap);
     li {
       @include flexbox(flex, row, none, none, nowrap);
