@@ -1,0 +1,13 @@
+dont use TypeScript until you can figure out importing with TypeScript.
+
+there seems to be a problem when trying to call the svg from constants.ts into app.ts
+console errors are: 
+constants.js:2 Uncaught ReferenceError: exports is not defined
+    at constants.js:2:23
+(anonymous) @ constants.js:2
+
+and 
+
+Uncaught ReferenceError: exports is not defined
+    at app.js:25:23
+(anonymous) @ app.js:25
