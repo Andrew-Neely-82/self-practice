@@ -1,7 +1,6 @@
 package javaGame.src.main;
 
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 
 public class KeyHandler implements KeyListener {
   public boolean upPressed, downPressed, leftPressed, rightPressed;
