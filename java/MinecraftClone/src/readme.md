@@ -1,5 +1,3 @@
-<hr>
-
 # **Minecraft Clone Game in Java**
 
 <br>
