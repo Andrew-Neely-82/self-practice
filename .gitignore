@@ -1,7 +1,2 @@
-.nvm/*
-bundle.js
-bundle.js.LICENSE.txt
-node_modules/*
-
-# files 
-./siteRecreation/githubProfile/.nvm
+/out/
+notes.js
