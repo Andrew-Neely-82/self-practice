@@ -1,9 +1,11 @@
-import React from "react";
-import { RiMenu3Line, RiClosedLine } from "react-icons/ri";
-import "./dist/css/navbar.css";
+import React, { useState } from 'react';
+import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from "../../assets/logo.svg";
+import "./dist/css/navbar.css";
 
-const navbar = () => {
+const Navbar = () => {
+  const [toggleMenu, setToggleMenu] = useState(false);
+
   return (
     <div className="navbar">
       <div className="navbar-links">
@@ -22,8 +24,13 @@ const navbar = () => {
         <p>Sign in</p>
         <button type="button">Sign up</button>
       </div>
+      <div className="navbar-menu">
+      {toggleMenu
+          ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
+          : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />}
+      </div>
     </div>
   );
 };
 
-export default navbar;
+export default Navbar;
