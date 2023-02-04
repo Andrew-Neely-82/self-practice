@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import { Blog, Features, Footer, Header, Possibility } from "./containers";
 import { Article, Brand, CTA, Feature, Navbar } from "./components";
+import "./dist/css/App.css"
 
 const App = () => {
   return (

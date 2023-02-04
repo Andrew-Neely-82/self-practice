@@ -1,0 +1,74 @@
+@import "./variables";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+}
+
+.navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar-links-logo {
+  margin-right: 2rem;
+  img {
+    height: 16px;
+    width: 62px;
+  }
+}
+
+.navbar-links-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-links-sign {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-links-container,
+.navbar-links-sign,
+.navbar-menu-container {
+  p {
+    color: #fff;
+    font-family: map-get($colors, Manrope);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+}
+
+.navbar-sign,
+.navbar-menu-container {
+  button {
+    color: #fff;
+    font-family: map-get($font-family, manrope);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    background: #ff4820;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  button:hover {
+    filter: brightness(1.25);
+  }
+  button:active {
+    filter: brightness(0.75);
+    box-shadow: 0 0 5px black inset;
+  }
+}

@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 6rem;
+}
+
+.navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar-links-logo {
+  margin-right: 2rem;
+}
+.navbar-links-logo img {
+  height: 16px;
+  width: 62px;
+}
+
+.navbar-links-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-links-sign {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-links-container p,
+.navbar-links-sign p,
+.navbar-menu-container p {
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: capitalize;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.navbar-sign button,
+.navbar-menu-container button {
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  background: #ff4820;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.navbar-sign button:hover,
+.navbar-menu-container button:hover {
+  filter: brightness(1.25);
+}
+.navbar-sign button:active,
+.navbar-menu-container button:active {
+  filter: brightness(0.75);
+  box-shadow: 0 0 5px black inset;
+}
+
+/*# sourceMappingURL=navbar.css.map */
