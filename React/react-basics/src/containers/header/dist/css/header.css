@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  margin-right: 5rem;
+}
+.header-content .gradient-text,
+.header-content p {
+  font-family: "Manrope";
+  font-style: normal;
+}
+.header-content .gradient-text {
+  color: transparent;
+  background-image: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
+  background-clip: text;
+  font-weight: 800;
+  font-size: 62px;
+  line-height: 75px;
+  letter-spacing: -0.04em;
+}
+.header-content p {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 27px;
+  color: #81afdd;
+  margin-top: 1.5rem;
+}
+
+.header-content-input {
+  width: 100%;
+  margin: 2rem 0 1rem;
+  display: flex;
+}
+.header-content-input input,
+.header-content-input button {
+  min-height: 50px;
+  width: 100%;
+  color: #fff;
+  font-family: "Manrope";
+  font-size: 20px;
+  line-height: 27px;
+  outline: none;
+  padding: 0 1rem;
+}
+.header-content-input input {
+  flex: 2;
+  background: #031b34;
+  border: 2px solid #031b34;
+  border-radius: 5px 0 0 5px;
+}
+.header-content-input button {
+  flex: 0.6;
+  background: #ff4820;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 0 5px 5px 0;
+}
+
+/*# sourceMappingURL=header.css.map */

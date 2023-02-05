@@ -1,0 +1,69 @@
+@import "./variables";
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  margin-right: 5rem;
+
+  .gradient-text,
+  p {
+    font-family: map-get($font-family, manrope);
+    font-style: normal;
+  }
+  .gradient-text {
+    color: transparent;
+    background-image: map-get($gradients, bar);
+    background-clip: text;
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+  }
+  p {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: map-get($colors, text);
+    margin-top: 1.5rem;
+  }
+}
+
+.header-content-input {
+  width: 100%;
+  margin: 2rem 0 1rem;
+  display: flex;
+
+  input,
+  button {
+    min-height: 50px;
+    width: 100%;
+    color: #fff;
+    font-family: map-get($font-family, manrope);
+    font-size: 20px;
+    line-height: 27px;
+    outline: none;
+    padding: 0 1rem;
+  }
+  input {
+    flex: 2;
+    background: map-get($colors, footer);
+    border: 2px solid map-get($colors, footer);
+    border-radius: 5px 0 0 5px;
+  }
+  button {
+    flex: 0.6;
+    background: #ff4820;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 5px 5px 0;
+  }
+}
