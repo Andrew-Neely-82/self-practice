@@ -1,0 +1,8 @@
+bin/
+node_modules/
+obj/
+
+
+self-practice.csproj
+package-lock.json
+package.json
